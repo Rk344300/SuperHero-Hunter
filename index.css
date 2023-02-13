@@ -1,0 +1,131 @@
+body {
+  /* background-color: rgb(71, 57, 57); */
+  background-image: url(./assets/spiderman-into-the-spider-verse-art-7y.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+  padding-left: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(171, 193, 221);
+}
+
+#nav-container {
+  position: sticky;
+  top: 1px;
+}
+
+.container-fluid {
+  height: 71px;
+  justify-content: space-around !important;
+}
+
+#search_containter {
+  height: auto;
+  width: 60vw;
+  margin: 9rem auto;
+  border: rgb(75, 5, 5) solid 2px;
+  border-radius: 5px;
+  /* background-color: rgb(17, 75, 75); */
+  position: relative;
+}
+#search {
+  background-color: none;
+  color: black;
+  font-weight: 700;
+}
+/* .transparent-input {
+  background-color: rgba(0, 0, 0, 0) !important;
+} */
+
+#list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#list li {
+  color: rgb(32, 30, 30);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgrey;
+  margin: 3px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#list li:hover {
+  background-color: rgb(146, 132, 132);
+}
+
+#detail_container {
+  height: auto;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  padding-left: 40px;
+  text-align: center;
+  /* border: 2px solid red; */
+  margin-bottom: 10px;
+  display: none;
+}
+.fas {
+  color: rgb(6, 139, 139);
+}
+
+.img img {
+  height: 400px;
+  width: auto;
+  /* border: 1px rgb(74, 212, 50) solid; */
+}
+
+#heroDetails {
+  height: 400px;
+  width: 50%;
+  /* border: 1px rgb(85, 56, 56) solid; */
+  color: rgb(77, 150, 214);
+  text-align: center;
+  font-weight: bold;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+#bio {
+  color: cyan;
+}
+#fav {
+  text-align: center;
+  margin-left: 40%;
+}
+#fbtn {
+  display: none;
+}
+
+#logo {
+  color: cyan;
+}
+.nav-link {
+  color: cyan;
+}
+.nav-link:hover {
+  color: white !important;
+}
