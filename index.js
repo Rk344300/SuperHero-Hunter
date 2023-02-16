@@ -16,17 +16,20 @@ var detailsContainer = document.getElementById('detail_container');
 let searchBtn = document.getElementById('search');
 let list = document.getElementById('list');
 
-//when we write in search tag
+//when we write in search input tag
 
 searchBtn.onkeyup = async function () {
     var searchVal = searchBtn.value;
     // console.log(searchVal);
+
+    //if the value in search is not empty , we fetch all the data related to value  what we write in search tag
     if (searchVal !== "") {
         let res = await fetch(
             `${API_URL}&nameStartsWith=` + searchVal.trim()
         );
         let data = await res.json();
         //console.log(data);
+        //displaying all the data in the form of list 
         function displayHero() {
             var hero_names = data.data.results;
             console.log(hero_names);
@@ -41,6 +44,8 @@ searchBtn.onkeyup = async function () {
                 img.style.width = "40px";
                 img.setAttribute("src", i.thumbnail.path + '.' + i.thumbnail.extension);
                 ImgDiv.appendChild(img);
+
+
                 li.appendChild(ImgDiv);
 
                 var text = document.createTextNode(i.name);
@@ -53,6 +58,7 @@ searchBtn.onkeyup = async function () {
                 let Fbtn = document.createElement('i');
                 Fbtn.classList = "fas fa-heart";
 
+                //after clicking the fbtn ,the event listerner will run  and the superhero is added in the favhero list
                 Fbtn.addEventListener('click', function (e) {
 
                     //console.log("enter fbtn");
@@ -64,6 +70,8 @@ searchBtn.onkeyup = async function () {
                 });
 
                 li.appendChild(Fbtn);
+
+                //when we click the list ,we get the details of the particular superhero
 
                 li.addEventListener('click', function () {
 
@@ -125,7 +133,7 @@ searchBtn.onkeyup = async function () {
     }
 
 }
-
+// this function help to add the favHero id to the favHero list
 function fpush(fid) {
     console.log(fid);
     if (favHeros.includes(fid)) {

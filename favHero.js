@@ -20,7 +20,7 @@ if (list.length == 0) {
     favLists.style.fontSize = "30px"
 
 }
-// fetch the hero
+// fetch the heros that is present in the list
 function fetchHeros(list) {
 
     for (var i of list) {
